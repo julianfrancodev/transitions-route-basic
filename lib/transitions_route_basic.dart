@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
+/// type of animations
 enum AnimationType { nomal, fadeIn }
 
+/// Main class, [context], is the BuildContext from App
+/// [child] widget to navigate
+/// [animation] type of animation from enum
 class TransitionsRouteBasic {
   final BuildContext context;
   final Widget child;
@@ -25,16 +29,20 @@ class TransitionsRouteBasic {
     }
   }
 
+  /// basic push from page
   void _pushPage(Route route) => Navigator.push(context, route);
 
+  /// push repleacement from page
   void _pushReplacement(Route route) =>
       Navigator.pushReplacement(context, route);
 
+  /// Normal transition to navigate from page
   void _normalTransition() {
     final route = MaterialPageRoute(builder: (_) => this.child);
     (this.repleacement) ? this._pushReplacement(route) : this._pushPage(route);
   }
 
+  /// Fade transtion to navigate from page
   void _fadeInTransition() {
     final route = PageRouteBuilder(
         pageBuilder: (_, __, ___) => this.child,

@@ -1,8 +1,7 @@
 name: transitions_route_basic
-description: A new Flutter project.
-version: 0.0.1
-author:
-homepage:
+description: Package that provides to manage transitions between screens, very symple
+version: 0.0.2
+homepage: https://github.com/julianfrancodev/transitions-route-basic
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

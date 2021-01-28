@@ -1,3 +1,10 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.2] - Bux fixes: better documentation interact
 
-* TODO: Describe initial release.
+* Example added
+* Add better comments 
+* Bug fixes
+
+
+## [0.0.1] - First Release
+
+* First version
