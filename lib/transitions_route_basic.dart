@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 enum AnimationType { nomal, fadeIn }
 
 /// Main class, [context], is the BuildContext from App
-/// [child] widget to navigate
+/// [child] widget to navigate from page
 /// [animation] type of animation from enum
 class TransitionsRouteBasic {
   final BuildContext context;
@@ -13,12 +13,15 @@ class TransitionsRouteBasic {
   final Duration duration;
   final bool repleacement;
 
+  /// Constructor that provides setting from attributes
   TransitionsRouteBasic(
       {@required this.context,
       @required this.child,
       this.repleacement = false,
       this.duration = const Duration(milliseconds: 300),
       this.animation = AnimationType.nomal}) {
+
+    /// Switch to validate type of animation to use.
     switch (this.animation) {
       case AnimationType.nomal:
         this._normalTransition();
@@ -32,7 +35,7 @@ class TransitionsRouteBasic {
   /// basic push from page
   void _pushPage(Route route) => Navigator.push(context, route);
 
-  /// push repleacement from page
+  /// push repleacement from page (No back button, No back apge)
   void _pushReplacement(Route route) =>
       Navigator.pushReplacement(context, route);
 

@@ -1,6 +1,6 @@
 name: transitions_route_basic
 description: Package that provides to manage transitions between screens, very symple
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/julianfrancodev/transitions-route-basic
 
 environment:
